@@ -1,0 +1,172 @@
+/* pseudo classes */
+.text:nth-child(2) {
+    color: red;
+}
+
+/* .text:nth-of-type(2) {
+    color: blue;
+} */
+/* .text:nth-child(5) {
+    color: blueviolet;
+}
+.text:first-child {
+    color: yellow;
+}
+.text:last-child {
+    color: brown;
+} */
+/* 
+.text:not(.active) {
+    color: red;
+} */
+
+
+/* :nth-child(odd) */
+/* .text:nth-child(odd) {
+    background-color: yellow;
+}
+
+/* nth-child(even) */
+/* .text:nth-child(even) {
+    font-size: 25px;
+}  */
+
+/* :nth-child(2n+1) - >
+(1, 3, 5, 7 და ა.შ).
+(2 * 0) + 1 = 1
+(2 * 1) + 1 = 3
+(2 * 2) + 1 = 5*/
+/* .text:nth-child(2n+1) {
+    color: blue;
+} */
+
+/* :nth-child(5n+1)  - >
+(1,6 და ა.შ)
+(5×0)+1 = 1
+(5 * 1) + 1 = 6*/
+/* .text:nth-child(5n+1) {
+    background-color: yellow;
+} */
+
+/* .text:nth-child(2n) {
+    background-color: red;
+} */
+
+
+
+
+/* css grid */
+.grid-wraper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: minmax(100px,auto) 200px 100px;
+    /* column-gap: 50px;
+    row-gap: 35px; */
+    gap: 35px
+}
+.grid-wraper div {
+    background-color: lightblue;
+    color: #fff;
+    font-size: 22px;
+}
+
+/* auto fill & auto fit */
+.auto-description h2 {
+    margin: 30px 0;
+}
+.grid-element {
+    background-color: deepPink;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+.grid-container {
+    display: grid;
+}
+.grid-container--fill {
+    grid-template-columns: repeat(auto-fill, 250px);
+    /* grid-template-columns: repeat(auto-fill,minmax(50px,1fr)); */
+}
+.grid-container--fit {
+    grid-template-columns: repeat(auto-fit,250px);
+}
+.child-element-grid {
+    display: grid;
+    /* justify-items: center;
+    align-items: center; */
+    place-items: center;
+}
+
+
+
+/* შემოკლებული ჩანაწერი */
+/* .grid-block {
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 100px 100px 100px; */
+
+    /* grid-template: rows / columns; */
+    /* grid-template: repeat(3,100px) / repeat(4,150px);
+} */
+
+
+/* practice styles */
+.grid-wraper-practice {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,250px);
+    gap: 50px;
+    justify-content: space-between;
+}
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+.product-image {
+    width: 100%;
+}
+
+
+
+/* test styles*/
+
+body,html {
+    height: 100%;
+}
+
+.grid-new {
+    display: grid;
+    height: 100%;
+    gap: 20px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+}
+.header {
+    grid-area: header;
+    background-color: lightgrey;
+}
+.main {
+    grid-area: main;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.aside {
+    grid-area: aside;
+    background-color: lightgrey;
+}
+.footer {
+    grid-area: footer;
+    background-color: lightgrey;
+
+}
+.main-item {
+    border: 1px solid darkgreen;
+    /* display: grid;
+    
+    place-items: center; */
+}
